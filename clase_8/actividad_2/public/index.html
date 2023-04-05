@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- NO OLVIDARSE DE enctype -->
+  <form enctype="multipart/form-data" action="/api/pets" method="post" style="display: flex; flex-direction: column; gap: 10px">
+    <div>
+      <label for="name">Ingrese el nombre de su mascota: </label>
+      <input type="text" name="name" id="pet-name" required>
+    </div>
+    <div>
+      <label for="type">Ingrese el tipo de mascota: </label>
+      <input type="text" name="type" id="pet-type" required>
+    </div>
+    <div>
+      <label for="file">Ingrese una imagen de su mascota: </label>
+      <input type="file" name="file" id="pet-file" required>
+    </div>
+    <div>
+      <button type="submit">
+        Enviar
+      </button>
+    </div>
+  </form>
+</body>
+</html>
