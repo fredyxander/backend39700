@@ -65,5 +65,5 @@ export const initializePassport = ()=>{
     passport.deserializeUser(async(id,done)=>{
         const userDB = await UserModel.findById(id);
         done(null, userDB)
-    });//req.user =userDB
+    });//req.user = userDB
 }
