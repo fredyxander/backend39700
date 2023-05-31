@@ -1,0 +1,13 @@
+{
+  "name": "matematicas-coder",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "fredy",
+  "license": "ISC"
+}
