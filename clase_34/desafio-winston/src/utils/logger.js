@@ -47,10 +47,27 @@ const currentEnv = process.env.NODE_ENV || "development";
 //crear un middleware para agregar el logger al objeto req
 export const addLogger = (req,res,next)=>{
     if(currentEnv === "development"){
-        req.logger = devLogger
+        req.logger = devLogger;
     } else {
-        req.logger = prodLogger
+        req.logger = prodLogger;
     }
     req.logger.http(`${req.url} - method: ${req.method}`);
     next();
 }
+
+
+// const addLogger2 = ()=>{
+//     let currentLogger;
+//     if(currentEnv === "development"){
+//         currentLogger=devLogger;
+//     } else {
+//         currentLogger=prodLogger;
+//     }
+//     return currentLogger;
+// }
+// export {addLogger2};
+
+// //archivo user.service.js
+// import {addLogger2} from "";
+// const logger = addLogger();
+// logger.info("mensaje informativo");
