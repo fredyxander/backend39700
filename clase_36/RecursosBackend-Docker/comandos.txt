@@ -1,0 +1,4 @@
+minikube start
+kubectl apply -f kubeusers.yaml
+minikube service list
+minikube service kubeservice
