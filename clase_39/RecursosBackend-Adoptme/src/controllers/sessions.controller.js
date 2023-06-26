@@ -20,7 +20,7 @@ const register = async (req, res) => {
         console.log(result);
         res.send({ status: "success", payload: result._id });
     } catch (error) {
-
+        console.log(error.message);
     }
 }
 

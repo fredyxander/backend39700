@@ -41,7 +41,7 @@ paths:
     put:
       summary: Actualizar el usuario por el id
       tags:
-        - Usuaurios
+        - Usuarios
       parameters:
         - name: uid
           in: path
@@ -62,6 +62,22 @@ paths:
             application/json:
               schema:
                 $ref: '#components/schemas/User'
+        "500":
+          description: Error interno del servidor
+    delete:
+      summary: eliminar un usuario por id
+      tags:
+        - Usuarios
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          description: uid es el id del usuario que desea eliminar
+          schema:
+            $type: string
+      responses:
+        "200":
+          description: Se elimino el usuario correctamente
         "500":
           description: Error interno del servidor
 
@@ -111,4 +127,4 @@ components:
         first_name: pepe
         last_name: suarez
         email: pepe@gmail.com
-        password: 1234
+        password: "1234"
